@@ -1,17 +1,29 @@
 // Firebase configuration
 // This is a placeholder configuration that will be replaced with your actual Firebase project details
-const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  databaseURL: "https://YOUR_PROJECT_ID.firebaseio.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID"
-};
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAtBEbhnCnNE87RKyOOtKQXaeXdcnvuRF0",
+    authDomain: "tictactoes123.firebaseapp.com",
+    databaseURL: "https://tictactoes123-default-rtdb.firebaseio.com",
+    projectId: "tictactoes123",
+    storageBucket: "tictactoes123.firebasestorage.app",
+    messagingSenderId: "401297086979",
+    appId: "1:401297086979:web:4fae774cad107f3fc88c36",
+    measurementId: "G-X7F4KL06VT"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 
 // Get a reference to the database service
 const database = firebase.database();
