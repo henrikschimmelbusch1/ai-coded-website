@@ -1,15 +1,15 @@
 // Firebase configuration
 // This is a placeholder configuration that will be replaced with your actual Firebase project details
-<script type="module">
+
   // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-analytics.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-analytics.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
+const firebaseConfig = {
     apiKey: "AIzaSyAtBEbhnCnNE87RKyOOtKQXaeXdcnvuRF0",
     authDomain: "tictactoes123.firebaseapp.com",
     databaseURL: "https://tictactoes123-default-rtdb.firebaseio.com",
@@ -18,12 +18,12 @@
     messagingSenderId: "401297086979",
     appId: "1:401297086979:web:4fae774cad107f3fc88c36",
     measurementId: "G-X7F4KL06VT"
-  };
+};
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
 
 // Get a reference to the database service
 const database = firebase.database();
