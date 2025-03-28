@@ -1,0 +1,10 @@
+// Firebase Database Rules
+// These rules allow anyone to read/write to your database
+// For a production app, you would want more restrictive rules
+// But for this simple game with limited users, these rules are sufficient
+{
+  "rules": {
+    ".read": true,
+    ".write": true
+  }
+}

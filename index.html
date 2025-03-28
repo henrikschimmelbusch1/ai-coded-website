@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Live Tic-Tac-Toe</h1>
+        
+        <!-- Login Section -->
+        <div id="login-section" class="section">
+            <h2>Login</h2>
+            <p>Enter your player number (0-9):</p>
+            <input type="number" id="player-id" min="0" max="9" class="input-field">
+            <button id="login-btn" class="btn">Login</button>
+        </div>
+        
+        <!-- Game Lobby Section -->
+        <div id="lobby-section" class="section hidden">
+            <h2>Game Lobby</h2>
+            <div class="lobby-container">
+                <div class="new-game">
+                    <h3>Start New Game</h3>
+                    <p>Select a player to challenge:</p>
+                    <div id="players-list" class="players-list">
+                        <!-- Player buttons will be added here dynamically -->
+                    </div>
+                </div>
+                <div class="saved-games">
+                    <h3>Saved Games</h3>
+                    <div id="saved-games-list" class="saved-games-list">
+                        <!-- Saved games will be added here dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Game Section -->
+        <div id="game-section" class="section hidden">
+            <h2>Game Board</h2>
+            <div class="game-info">
+                <p>Playing against: <span id="opponent-id"></span></p>
+                <p>Current turn: <span id="current-turn"></span></p>
+            </div>
+            <div class="game-board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+            <div class="game-controls">
+                <button id="exit-game-btn" class="btn">Exit Game</button>
+            </div>
+        </div>
+        
+        <!-- Game Result Section -->
+        <div id="result-section" class="section hidden">
+            <h2>Game Result</h2>
+            <p id="result-message"></p>
+            <button id="back-to-lobby-btn" class="btn">Back to Lobby</button>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/firebase-config.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/lobby.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
